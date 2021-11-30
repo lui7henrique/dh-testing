@@ -3,11 +3,12 @@ const { sum } = require("../calc.js");
 
 describe("Sum", () => {
   for (i = 0; i < 20; i++) {
-    const firstRandomNumber = randomIntFromInterval(0, 100);
-    const secondRandomNumber = randomIntFromInterval(0, 100);
-    const sumValue = firstRandomNumber + secondRandomNumber;
-    test(`${firstRandomNumber} + ${secondRandomNumber} = ${sumValue}`, () => {
-      expect(sum(firstRandomNumber, secondRandomNumber)).toBe(sumValue);
+    const firstNumber = randomIntFromInterval(0, 100);
+    const secondNumber = randomIntFromInterval(0, 100);
+    const result = firstNumber + secondNumber;
+
+    test(`[${i}] ${firstNumber} + ${secondNumber} = ${result}`, () => {
+      expect(sum(firstNumber, secondNumber)).toBe(result);
     });
   }
 });

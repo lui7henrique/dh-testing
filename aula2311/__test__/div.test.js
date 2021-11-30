@@ -1,14 +1,14 @@
 const { randomIntFromInterval } = require("../utils/randomNumber");
 const { div } = require("../calc.js");
 
-describe("Div", () => {
+describe("Division", () => {
   for (i = 0; i < 20; i++) {
-    const firstRandomNumber = randomIntFromInterval(0, 100);
-    const secondRandomNumber = randomIntFromInterval(0, 100);
-    const divValue = firstRandomNumber / secondRandomNumber;
+    const firstNumber = randomIntFromInterval(0, 100);
+    const secondNumber = randomIntFromInterval(0, 100);
+    const result = firstNumber / secondNumber;
 
-    test(`${firstRandomNumber} / ${secondRandomNumber} = ${divValue}`, () => {
-      expect(div(firstRandomNumber, secondRandomNumber)).toBe(divValue);
+    test(`[${i}] ${firstNumber} / ${secondNumber} = ${result}`, () => {
+      expect(div(firstNumber, secondNumber)).toBe(result);
     });
   }
 });

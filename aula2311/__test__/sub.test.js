@@ -3,12 +3,12 @@ const { sub } = require("../calc.js");
 
 describe("Sub", () => {
   for (i = 0; i < 20; i++) {
-    const firstRandomNumber = randomIntFromInterval(0, 100);
-    const secondRandomNumber = randomIntFromInterval(0, 100);
-    const subvalue = firstRandomNumber - secondRandomNumber;
+    const firstNumber = randomIntFromInterval(0, 100);
+    const secondNumber = randomIntFromInterval(0, 100);
+    const result = firstNumber - secondNumber;
 
-    test(`${firstRandomNumber} - ${secondRandomNumber} = ${subvalue}`, () => {
-      expect(sub(firstRandomNumber, secondRandomNumber)).toBe(subvalue);
+    test(`[${i}] ${firstNumber} - ${secondNumber} = ${result}`, () => {
+      expect(sub(firstNumber, secondNumber)).toBe(result);
     });
   }
 });

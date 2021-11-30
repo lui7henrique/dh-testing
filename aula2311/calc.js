@@ -14,4 +14,8 @@ const mult = (a, b) => {
   return a * b;
 };
 
-module.exports = { sum, sub, div, mult };
+const squared = (a) => {
+  return a * a;
+};
+
+module.exports = { sum, sub, div, mult, squared };

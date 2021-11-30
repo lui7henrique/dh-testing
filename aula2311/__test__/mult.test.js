@@ -1,15 +1,14 @@
 const { randomIntFromInterval } = require("../utils/randomNumber");
-
 const { mult } = require("../calc.js");
 
-describe("Mult", () => {
+describe("Multiplication", () => {
   for (i = 0; i < 20; i++) {
-    const firstRandomNumber = randomIntFromInterval(0, 100);
-    const secondRandomNumber = randomIntFromInterval(0, 100);
-    const multValue = firstRandomNumber * secondRandomNumber;
+    const firstNumber = randomIntFromInterval(0, 100);
+    const secondNumber = randomIntFromInterval(0, 100);
+    const result = firstNumber * secondNumber;
 
-    test(`${firstRandomNumber} * ${secondRandomNumber} = ${multValue}`, () => {
-      expect(mult(firstRandomNumber, secondRandomNumber)).toBe(multValue);
+    test(`[${i}] ${firstNumber} * ${secondNumber} = ${result}`, () => {
+      expect(mult(firstNumber, secondNumber)).toBe(result);
     });
   }
 });
